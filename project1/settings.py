@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "bus.apps.BusConfig",
-
     'import_export',
 ]
 
@@ -162,7 +161,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'kusumakumarproject@gmail.com'  # Replace with your Gmail address
+EMAIL_HOST_USER = 'user@gmmail.com'  # Replace with your Gmail address
 EMAIL_HOST_PASSWORD = 'sptf gfif vwar qfmf'  # Use an app-specific password if 2FA is enabled
 DEFAULT_FROM_EMAIL = 'MvgrBusManagement@gmail.com'  # Sender email address
 
@@ -171,6 +170,6 @@ DEFAULT_FROM_EMAIL = 'MvgrBusManagement@gmail.com'  # Sender email address
 
 
 # settings.py
-STRIPE_TEST_PUBLIC_KEY = 'pk_test_51QDofvBy4oxwQuUyCANwsDS8KKp6SP3KDUiBSTLoq1g5VnacIMjDDSzEQVqLW6qIGIPRZwFGNQ0LDTyalqkHXLGg00QdLX4Eek'
-STRIPE_TEST_SECRET_KEY = 'sk_test_51QDofvBy4oxwQuUyg4YKi23iNwKs07z62Irk2ZtTxf4YLNBaTdVND4cmziKoht8jb0exc97Xr3DjtermbVt3rP0s00h7nsr1aM'
+STRIPE_TEST_PUBLIC_KEY = 'userStripePublicKey'
+STRIPE_TEST_SECRET_KEY = 'userStripeSecretKey'
 
