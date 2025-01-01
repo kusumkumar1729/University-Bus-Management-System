@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Form - University Bus Management System</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <script src="{% static 'script.js' %}" defer></script>
+</head>
+<body>
+  <!-- Marquee for College Name -->
+  <marquee behavior="scroll-animation" direction="left" class="marquee">Maharaj Vijayaram Gajapathi Raj College of Engineering (Autonomous)</marquee>
+
+  <header>
+    <div class="logo" style ="display: flex; margin:10px;">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_nBqKGojl45dPe27v6-CuoZAC2brmov3EJfwUSaMAyfkw=s900-c-k-c0x00ffffff-no-rj" alt="College Logo">
+    </div>
+
+    
+    <nav>
+      
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'routes' %}">Bus Updates</a></li>
+        <li><a href="{% url 'login' %}">Student Login</a></li>
+        <li><a href="{% url 'vacancy' %}">Vacancies</a></li>
+        <li><a href="{% url 'apply' %}">Application Form</a></li>
+        <li><a href="{% url 'Info' %}">Info</a></li>
+        <li><a href="{% url 'Remarks' %}">Remarks</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="application-form-section scroll-animation">
+      
+      <h1 style="display: flex;justify-content:center;"> Bus Feedback Form </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Feedback</button>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    
+    </section>
+  </main>
+
+  
+</body>
+</html>

@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Details - University Bus Management System</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <script src = "{% static 'script.js' %}"></script>
+  <style>
+    /* Additional styling for the logout button */
+    .logout-button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .logout-button:hover {
+      background-color: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_nBqKGojl45dPe27v6-CuoZAC2brmov3EJfwUSaMAyfkw=s900-c-k-c0x00ffffff-no-rj" alt="College Logo">
+    </div>
+    <div class="header-content">
+      <h1>Student Dashboard</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'routes' %}">Bus Updates</a></li>
+          <li><a href="{% url 'login' %}">Student Login</a></li>
+          <li><a href="{% url 'vacancy' %}">Vacancies</a></li>
+          <li><a href="{% url 'apply' %}">Application Form</a></li>
+          <li><a href="{% url 'Info' %}">Info</a></li>
+          <li><a href="{% url 'Remarks' %}">Remarks</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li> 
+            <div class="logout-container" style = "display: right;">
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="logout-button">Logout</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>  
+
+  </header>
+
+ 
+
+  <main>
+    <section class="student-details">
+      <div class="student-info">
+
+        <div class="student-image">
+          {% if student.image %}
+              <img src="{{ student.image.url }}" alt="Student Image" height="100px">
+          {% else %}
+              <img src="{% static 'default_image.jpg' %}" alt="Default Image" height="100px">
+          {% endif %}
+        </div>
+      
+        <div class="student-info-text">
+          <h2>Student Name: {{ student.full_name }}</h2>
+          <p><strong>ID:</strong> {{ student.student_id }}</p>
+          <p><strong>Course:</strong> {{ student.course }}</p>
+          <p><strong>Year:</strong> {{ student.year }}</p>
+        </div>
+      </div>
+
+      <section class="fees-info">
+        <h2>Transport Fee Status</h2>
+        <p><strong>Balance Amount:</strong> ₹{{ student.balance_amount.total_balance }}</p>
+    
+        <h3>Fee Details for Each Year</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Transport Fee</th>
+                    <th>Paid Amount</th>
+                    <th>Balance Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for year, details in fees_details.items %}
+                <tr>
+                    <td>{{ details.year }}</td>
+                    <td>₹{{ details.transport_fee }}</td>
+                    <td>₹{{ details.paid_amount }}</td>
+                    <td>₹{{ details.balance_amount }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+        <div style="display:flex; translate: -400px; margin:15px;">
+           
+          <form action="{% url 'create_checkout_session' student.student_id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" style="margin: 15px; width: auto;">Pay Balance</button>
+          </form>
+            
+        </div>
+         
+
+        <div style="display:flex; translate: -400px; margin:15px;">
+          <form method="post" action="{% url 'withdrawl' %}">
+            {% csrf_token %}
+            <button type="submit" style="margin: 15px; width: auto;">Withdraw</button>
+          </form>
+        </div>
+        <p style="color:red;">Note: Click on Withdraw if you want to quit from the College Bus</p>
+
+        
+
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2024 University Bus Management System</p>
+    <p>Developed by: M.KusumaKumar, B.Karthikeya Teja, Shreekha</p>
+  </footer>
+</body>
+</html>

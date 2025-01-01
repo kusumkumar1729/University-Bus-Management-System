@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Routes - University Bus Management System</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+   <marquee behavior="scroll-animation" direction="left" class="marquee">Maharaj Vijayaram Gajapathi Raj College of Engineering (Autonomous)</marquee>
+  
+  <header>
+    <div class="logo">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_nBqKGojl45dPe27v6-CuoZAC2brmov3EJfwUSaMAyfkw=s900-c-k-c0x00ffffff-no-rj" alt="College Logo">
+    </div>
+    <div class="header-content">
+      <h1>Bus Route Updates</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'routes' %}">Bus Updates</a></li>
+          <li><a href="{% url 'login' %}">Student Login</a></li>
+          <li><a href="{% url 'vacancy' %}">Vacancies</a></li>
+          <li><a href="{% url 'apply' %}">Application Form</a></li>
+          <li><a href="{% url 'Info' %}">Info</a></li>
+          <li><a href="{% url 'Remarks' %}">Remarks</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="bus-routes" class="scroll-animation">
+      <!-- Display Associated Images and Notes -->
+      {% if images %}
+      <div class="image-box">
+        <h3>Bus Route Map</h3>
+        <h6 style = "color :maroon"> Click on the Image to Download!!</h6>
+        {% for image in images %}
+        <div class="image-content">
+          {% if image.image %}
+          <a href="{{ image.image.url }}" download>
+            <img src="{{ image.image.url }}" alt="Bus Route Image" >
+          </a>
+          {% endif %}
+          {% if image.note %}
+          <div class="note-box">
+            <h5>Note:</h5>
+            <p>{{ image.note }}</p>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <h1 style="display: flex;justify-content:center;"> Bus Routes </h1>
+      <div class="routes-container">
+        <!-- Display Route Details -->
+        {% for bus in buses %}
+        <div class="route">
+          <h3 style="text-decoration:underline;font-size:25px;">{{ bus.name }}</h3>
+          <p>Stops: {{ bus.routes }}</p>
+          <p>Morning Start Time: {{ bus.morning_start_time }}</p>
+          <p>College Start Time: {{ bus.college_start_time }}</p>
+          
+            {% if bus.image %}
+              <a href="{{ bus.image.url }}" download>
+                <img src="{{ bus.image.url }}" alt="Bus Image">
+              </a>
+          
+          {% endif %}
+          {% if bus.description %}
+          <p>Description: {{ bus.description }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 University Bus Management System</p>
+    <p>Developed by: M.KusumaKumar, B.Karthikeya, Teja Shreekha</p>
+  </footer>
+</body>
+</html>

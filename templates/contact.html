@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - University Bus Management System</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Link to your existing CSS file -->
+  <script src = "{% static 'script.js' %}"></script>
+</head>
+<body>
+  <div>
+    <marquee behavior="scroll-animation" direction="left" class="marquee">Maharaj Vijayaram Gajapathi Raj College of Engineering (Autonomous)</marquee>
+    
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="https://yt3.googleusercontent.com/ytc/AIdro_nBqKGojl45dPe27v6-CuoZAC2brmov3EJfwUSaMAyfkw=s900-c-k-c0x00ffffff-no-rj" alt="College Logo">
+      </div>
+      <div class="header-content">
+        <h1>College Transportation</h1>
+        <nav>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'routes' %}">Bus Updates</a></li>
+            <li><a href="{% url 'login' %}">Student Login</a></li>
+            <li><a href="{% url 'vacancy' %}">Vacancies</a></li>
+            <li><a href="{% url 'apply' %}">Application Form</a></li>
+            <li><a href="{% url 'Info' %}">Info</a></li>
+            <li><a href="{% url 'Remarks' %}">Remarks</a></li>
+            
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section id="contact">
+      <h1>Contact Us</h1>
+      <p>Feel free to reach out to any of the contacts listed below for your specific needs.</p>
+      
+      <!-- Developer Details -->
+      <div class="contact-section">
+        <h2>Developers</h2>
+        <p><strong>M.Kusuma Kumar</strong><br>
+           Web Developer<br>
+           Email: kusumakumar233@gmail.com<br>
+           Phone: +91 7207492891
+        </p>
+        <p><strong>B.Karthikeya</strong><br>
+           Front-end Developer<br>
+           Email: <br>
+           Phone: +91 7993421916
+        </p>
+      </div>
+      
+      <!-- Transportation Convener Details -->
+      <div class="contact-section">
+        <h2>Transportation Convener</h2>
+        <p><strong>Dr. ATCHUTA RAO SADHU</strong><br>
+           Associate Professor, DATA Engineering<br>
+           CONVENER - COLLEGE TRANSPORT<br>
+           Mobile: 9441159714<br>
+           Email: transportation.mvgr@gmail.com
+        </p>
+      </div>
+
+      <!-- College Staff Information -->
+      <div class="contact-section">
+        <h2>College Staff Information</h2>
+        <p><strong>Ms. Anjali Mehta</strong><br>
+           Transport Coordinator<br>
+           Email: anjali.mehta@mvgr.edu<br>
+           Phone: +91 9822222222
+        </p>
+        <p><strong>Mr. Ravi Kumar</strong><br>
+           Logistics Manager<br>
+           Email: ravi.kumar@mvgr.edu<br>
+           Phone: +91 9933333333
+        </p>
+      </div>
+
+      <!-- Bus Drivers Information -->
+      <div class="contact-section">
+        <h2>Bus Drivers</h2>
+        <p><strong>Mr. Suresh Yadav</strong><br>
+           Bus Route 1 (City Center - College)<br>
+           Mobile: +91 9988776655
+        </p>
+        <p><strong>Mr. Mohan Reddy</strong><br>
+           Bus Route 2 (East End - College)<br>
+           Mobile: +91 9876543211
+        </p>
+        <p><strong>Ms. Lakshmi Devi</strong><br>
+           Bus Route 3 (West End - College)<br>
+           Mobile: +91 9123456780
+        </p>
+
+      </div>
+
+      <iframe src ="https://www.mvgrce.com/campustour/mvgr-gtp/" style = "display: flex; justify-content:center; margin:50px;padding:32px;height:40vh;width:30vw;"></iframe>
+  
+    </section>
+  
+
+  
+    
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 University Bus Management System</p>
+    <p>Developed by: M.KusumaKumar B.karthikeya Teja Shreekha</p>
+  </footer>
+</body>
+</html>

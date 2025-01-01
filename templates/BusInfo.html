@@ -1,0 +1,1197 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVGR Bus Management System</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <script src="{% static 'script.js' %}" defer></script> <!-- Include script.js -->
+
+</head>
+<body>
+  <div>
+   <marquee behavior="scroll-animation" direction="left" class="marquee">Maharaj Vijayaram Gajapathi Raj College of Engineering (Autonomous)</marquee>
+  
+    <header>
+    
+     <div class="logo">
+       <img src=" https://yt3.googleusercontent.com/ytc/AIdro_nBqKGojl45dPe27v6-CuoZAC2brmov3EJfwUSaMAyfkw=s900-c-k-c0x00ffffff-no-rj" alt="College Logo">
+      </div>
+
+      <div class = "header-content">
+        <h1>College Transportation </h1>
+        <nav>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'routes' %}">Bus Updates</a></li>
+            <li><a href="{% url 'login' %}">Student Login</a></li>
+            <li><a href="{% url 'vacancy' %}">Vacancies</a></li>
+            <li><a href="{% url 'apply' %}">Application Form</a></li>
+            <li><a href="{% url 'Info' %}">Info</a></li>
+            <li><a href="{% url 'Remarks' %}">Remarks</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+      <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+          <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+          <title>Untitled Spreadsheet</title>
+          <meta name="author" content="Tally2" />
+          <meta name="title" content="Untitled Spreadsheet" />
+          <meta name="company" content="Hewlett-Packard Company" />
+        <style type="text/css">
+          html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+          a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+          a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+          div.comment { display:none }
+          table { border-collapse:collapse; page-break-after:always }
+          .gridlines td { border:1px dotted black }
+          .gridlines th { border:1px dotted black }
+          .b { text-align:center }
+          .e { text-align:center }
+          .f { text-align:right }
+          .inlineStr { text-align:left }
+          .n { text-align:right }
+          .s { text-align:left }
+          td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          td.style1 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          th.style1 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          td.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          th.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          td.style3 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial Black'; font-size:16pt; background-color:white }
+          th.style3 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial Black'; font-size:16pt; background-color:white }
+          td.style4 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          th.style4 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          td.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:14pt; background-color:white }
+          th.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:14pt; background-color:white }
+          td.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:white }
+          th.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:white }
+          td.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          th.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          td.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          th.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          td.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:white }
+          th.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:white }
+          td.style10 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          th.style10 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          td.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          th.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+          td.style12 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          th.style12 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          td.style13 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:8pt; background-color:white }
+          th.style13 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:8pt; background-color:white }
+          td.style14 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          th.style14 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+          td.style15 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:14pt; background-color:white }
+          th.style15 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:14pt; background-color:white }
+          td.style16 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:14pt; background-color:white }
+          th.style16 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:14pt; background-color:white }
+          td.style17 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial Black'; font-size:16pt; background-color:white }
+          th.style17 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial Black'; font-size:16pt; background-color:white }
+          table.sheet0 col.col0 { width:82.68888794pt }
+          table.sheet0 col.col1 { width:92.85555449pt }
+          table.sheet0 col.col2 { width:93.53333226pt }
+          table.sheet0 col.col3 { width:88.78888787pt }
+          table.sheet0 col.col4 { width:86.07777679pt }
+          table.sheet0 col.col5 { width:80.65555463pt }
+          table.sheet0 col.col6 { width:80.65555463pt }
+          table.sheet0 col.col7 { width:77.26666578pt }
+          table.sheet0 col.col8 { width:80.65555463pt }
+          table.sheet0 col.col9 { width:82.68888794pt }
+          table.sheet0 col.col10 { width:77.94444355pt }
+          table.sheet0 col.col11 { width:92.17777672pt }
+          table.sheet0 col.col12 { width:82.68888794pt }
+          table.sheet0 col.col13 { width:77.94444355pt }
+          table.sheet0 col.col14 { width:86.07777679pt }
+          table.sheet0 col.col15 { width:75.23333247pt }
+          table.sheet0 col.col16 { width:63.03333261pt }
+          table.sheet0 tr { height:14.4pt }
+          table.sheet0 tr.row0 { height:24.75pt }
+          table.sheet0 tr.row1 { height:18pt }
+          table.sheet0 tr.row2 { height:18pt }
+          table.sheet0 tr.row3 { height:48pt }
+          table.sheet0 tr.row4 { height:48pt }
+          table.sheet0 tr.row5 { height:48pt }
+          table.sheet0 tr.row6 { height:48pt }
+          table.sheet0 tr.row7 { height:48pt }
+          table.sheet0 tr.row8 { height:55.2pt }
+          table.sheet0 tr.row9 { height:48pt }
+          table.sheet0 tr.row10 { height:48pt }
+          table.sheet0 tr.row11 { height:48pt }
+          table.sheet0 tr.row12 { height:48pt }
+          table.sheet0 tr.row13 { height:48pt }
+          table.sheet0 tr.row14 { height:48pt }
+          table.sheet0 tr.row15 { height:48pt }
+          table.sheet0 tr.row16 { height:48pt }
+          table.sheet0 tr.row17 { height:48pt }
+          table.sheet0 tr.row18 { height:48pt }
+          table.sheet0 tr.row19 { height:48pt }
+          table.sheet0 tr.row20 { height:48pt }
+          table.sheet0 tr.row21 { height:48pt }
+          table.sheet0 tr.row22 { height:48pt }
+          table.sheet0 tr.row23 { height:48pt }
+          table.sheet0 tr.row24 { height:48pt }
+          table.sheet0 tr.row25 { height:48pt }
+          table.sheet0 tr.row26 { height:48pt }
+          table.sheet0 tr.row27 { height:48pt }
+        </style>
+      </head>
+    
+      <body>
+    <style>
+    @page { margin-left: 0in; margin-right: 0in; margin-top: 0in; margin-bottom: 0in; }
+    body { margin-left: 0in; margin-right: 0in; margin-top: 0in; margin-bottom: 0in; }
+    </style>
+        <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+            <col class="col0">
+            <col class="col1">
+            <col class="col2">
+            <col class="col3">
+            <col class="col4">
+            <col class="col5">
+            <col class="col6">
+            <col class="col7">
+            <col class="col8">
+            <col class="col9">
+            <col class="col10">
+            <col class="col11">
+            <col class="col12">
+            <col class="col13">
+            <col class="col14">
+            <col class="col15">
+            <col class="col16">
+            <tbody>
+              <tr class="row0">
+                <td class="column0 style17 s style17" colspan="17">BUS ROUTE MAP ( Stop wise fee ) 2024-25  ::  VSP , SKLM , BOBBILI, S.KOTA , CHEEPURUPALLI  &amp;  VZM </td>
+              </tr>
+              <tr class="row1">
+                <td class="column0 style15 s style15" rowspan="2">Bus Code</td>
+                <td class="column1 style16 s style15" colspan="16">Stops</td>
+              </tr>
+              <tr class="row2">
+                <td class="column1 style5 s">stop - 1</td>
+                <td class="column2 style5 s">stop - 2</td>
+                <td class="column3 style5 s">stop - 3</td>
+                <td class="column4 style5 s">stop - 4</td>
+                <td class="column5 style5 s">stop - 5</td>
+                <td class="column6 style5 s">stop - 6</td>
+                <td class="column7 style5 s">stop - 7</td>
+                <td class="column8 style5 s">stop - 8</td>
+                <td class="column9 style5 s">stop - 9</td>
+                <td class="column10 style5 s">stop - 10</td>
+                <td class="column11 style5 s">stop - 11</td>
+                <td class="column12 style5 s">stop - 12</td>
+                <td class="column13 style5 s">stop - 13</td>
+                <td class="column14 style5 s">stop - 14</td>
+                <td class="column15 style5 s">stop - 15</td>
+                <td class="column16 style5 s">stop - 16</td>
+              </tr>
+              <tr class="row3">
+                <td class="column0 style6 s">A<br />
+    ( SENIORS )<br />
+    (KURMANNAPALEM) <br />
+    Starts at 6:45am</td>
+                <td class="column1 style7 s">Kurmannapalem  <br />
+    (Rs.37500/-)</td>
+                <td class="column2 style8 s">Vadlapudi<br />
+    (Rs.37500/-)</td>
+                <td class="column3 style8 s">Srinagar<br />
+    (Rs.37500/-)</td>
+                <td class="column4 style7 s">Gajuwaka P S<br />
+    (Rs.37500/-)</td>
+                <td class="column5 style8 s">R.K.Hospital<br />
+    (Rs.37500/-)</td>
+                <td class="column6 style8 s"><a class="comment-indicator"></a><div class="comment">Before stop <br />
+    Old Gajuwaka</div>
+    Panthulu Gari Meda<br />
+    (Rs.37500/-)</td>
+                <td class="column7 style8 s">BHPV<br />
+    (Rs.37500/-)</td>
+                <td class="column8 style8 s"><a class="comment-indicator"></a><div class="comment">Before stop <br />
+    Natayapalem</div>
+    Sheelanagar<br />
+    (Rs.37500/-)</td>
+                <td class="column9 style8 s">Airport<br />
+    (Rs.37500/-)</td>
+                <td class="column10 style7 s">Kakaninagar<br />
+    (Rs.37500/-)</td>
+                <td class="column11 style8 s"><a class="comment-indicator"></a><div class="comment">befor stop<br />
+    Gopalapatnam</div>
+    L G Polymeries<br />
+    (Rs.34500/-)</td>
+                <td class="column12 style8 s">Purshottampuram<br />
+    (Rs.34500/-)</td>
+                <td class="column13 style8 s">Naidu Thota<br />
+    (Rs.34500/-)</td>
+                <td class="column14 style8 s"><a class="comment-indicator"></a><div class="comment">Befor stop<br />
+    pendurthy</div>
+    Akkireddypalem<br />
+    (Rs.34500/-)</td>
+                <td class="column15 style8 s">Anandapuram<br />
+    (Rs.25000/-)</td>
+                <td class="column16 style8 s">Rajapulova<br />
+    (Rs.25000/-)</td>
+              </tr>
+              <tr class="row4">
+                <td class="column0 style9 s">B<br />
+    ( JUNIORS )<br />
+    (Scindia) <br />
+    (Starts at 6:45am)</td>
+                <td class="column1 style7 s">Scindia <br />
+    (Rs.37500/-)</td>
+                <td class="column2 style7 s">Sriharipuram<br />
+    (Rs.37500/-)</td>
+                <td class="column3 style8 s"><a class="comment-indicator"></a><div class="comment">Befor stop <br />
+    Coromandel Gate</div>
+    Gajuwaka Depo<br />
+    (Rs.37500/-)</td>
+                <td class="column4 style8 s">BC.Road<br />
+    (Rs.37500/-)</td>
+                <td class="column5 style8 s">New Gajuwaka Jn <br />
+    (Rs.37500/-)</td>
+                <td class="column6 style8 s">Old Gajuwaka Jn <br />
+    (Rs.37500/-)</td>
+                <td class="column7 style8 s"><a class="comment-indicator"></a><div class="comment">Before stop <br />
+    Natayapalem</div>
+    Sheelanagar<br />
+    (Rs.37500/-)</td>
+                <td class="column8 style8 s">Airport<br />
+    (Rs.37500/-)</td>
+                <td class="column9 style8 s">Gopalapatnam P S<br />
+    (Rs.34500/-)</td>
+                <td class="column10 style8 s">L G Polymeries<br />
+    (Rs.34500/-)</td>
+                <td class="column11 style8 s">Naidu Thota<br />
+    (Rs.34500/-)</td>
+                <td class="column12 style8 s">Vepagunta<br />
+    (Rs.34500/-)</td>
+                <td class="column13 style10 s">Sujathanagar<br />
+    (Rs.34500/-)</td>
+                <td class="column14 style8 s"><a class="comment-indicator"></a><div class="comment">Befor stop<br />
+    pendurthy</div>
+    Akkireddypalem<br />
+    (Rs.34500/-)</td>
+                <td class="column15 style8 s">Anandapuram<br />
+    (Rs.25000/-)</td>
+                <td class="column16">&nbsp;</td>
+              </tr>
+              <tr class="row5">
+                <td class="column0 style9 s">C<br />
+    ( JUNIORS )<br />
+    &nbsp;(SRIKAKULAM)<br />
+    &nbsp;(Starts at 6:45am)</td>
+                <td class="column1 style7 s">Arasavilli<br />
+    (Rs.37000/-)</td>
+                <td class="column2 style7 s">Mill Junction<br />
+    (Rs.37000/-)</td>
+                <td class="column3 style8 s">OBS<br />
+    (Rs.37000/-)</td>
+                <td class="column4 style8 s"><a class="comment-indicator"></a><div class="comment">befor stops <br />
+    1.7 Road<br />
+    2.krishna Park</div>
+    Day &amp; Night<br />
+    (Rs.37000/-)</td>
+                <td class="column5 style8 s">PN.Colony<br />
+    (Rs.37000/-)</td>
+                <td class="column6 style8 s"><a class="comment-indicator"></a><div class="comment">Befor stop<br />
+    1. KIMS <br />
+    2. Harch<br />
+    3. By pass</div>
+    Kintara Mill<br />
+    (Rs.37000/-)</td>
+                <td class="column7 style8 s">Chilakapalem<br />
+    (Rs.37000/-)</td>
+                <td class="column8 style2 s"><a class="comment-indicator"></a><div class="comment">Befor Stop<br />
+    1. Bothupeta<br />
+    2. Raivalasa</div>
+    Subadhrapuram<br />
+    (Rs.34000/-)</td>
+                <td class="column9 style8 s">Ranastalam<br />
+    (Rs.31000/-)</td>
+                <td class="column10 style8 s"><a class="comment-indicator"></a><div class="comment">Befor Stops<br />
+    1. Ravada jn<br />
+    2. Kosta</div>
+    Pathivadapalem<br />
+    (Rs.31000/-)</td>
+                <td class="column11 style8 s">Pydibhimavaram<br />
+    (Rs.31000/-)</td>
+                <td class="column12 style8 s">Kandivalasa Gedda<br />
+    (Rs.31000/-)</td>
+                <td class="column13 style8 s">Mylan Company<br />
+    (Rs.31000/-)</td>
+                <td class="column14 style8 s">Poosapati Rega<br />
+    (Rs.27000/-)</td>
+                <td class="column15 style8 s">Natavalasa<br />
+    (Rs.27000/-)</td>
+                <td class="column16 style8 s">Denkada<br />
+    (Rs.27000/-)</td>
+              </tr>
+              <tr class="row6">
+                <td class="column0 style9 s">D<br />
+    ( SENIORS ) <br />
+    (SRIKAKULAM)<br />
+    &nbsp;Starts at 6:45am</td>
+                <td class="column1 style1 s">Arasavilli<br />
+    (Rs.37000/-)</td>
+                <td class="column2 style1 s">Mill Junction<br />
+    (Rs.37000/-)</td>
+                <td class="column3 style2 s">Suryamahal<br />
+    (Rs.37000/-)</td>
+                <td class="column4 style1 s"><a class="comment-indicator"></a><div class="comment">Befor stop<br />
+    Ramalaxmana<br />
+    </div>
+    Day &amp; Night<br />
+    (Rs.37000/-)</td>
+                <td class="column5 style2 s"><a class="comment-indicator"></a><div class="comment">Befor stop<br />
+    1. KIMS <br />
+    2. Harch<br />
+    3. By pass</div>
+    Kintara Mill<br />
+    (Rs.37000/-)</td>
+                <td class="column6 style2 s">Chilakapalem<br />
+    (Rs.37000/-)</td>
+                <td class="column7 style2 s"><a class="comment-indicator"></a><div class="comment">Befor Stop<br />
+    1. Bothupeta<br />
+    2. Raivalasa</div>
+    Subadhrapuram<br />
+    (Rs.34000/-)</td>
+                <td class="column8 style2 s">Ranastalam<br />
+    (Rs.31000/-)</td>
+                <td class="column9 style2 s"><a class="comment-indicator"></a><div class="comment">Befor Stop<br />
+    Orisam</div>
+    Pydibhimavaram<br />
+    (Rs.31000/-)</td>
+                <td class="column10 style2 s">Kandivalasa Gedda<br />
+    (Rs.31000/-)</td>
+                <td class="column11 style2 s">Mylan Company<br />
+    (Rs.31000/-)</td>
+                <td class="column12 style2 s">Poosapati Rega<br />
+    (Rs.27000/-)</td>
+                <td class="column13 style2 s">Natavalasa<br />
+    (Rs.27000/-)</td>
+                <td class="column14 style8 s">Denkada<br />
+    (Rs.27000/-)</td>
+                <td class="column15 style8 null"></td>
+                <td class="column16 style10 null"></td>
+              </tr>
+              <tr class="row7">
+                <td class="column0 style9 s">E<br />
+    ( JUNIORS ) <br />
+    (BOBBILI) <br />
+    Starts at 6:45am </td>
+                <td class="column1 style8 s">Bobbili<br />
+    (Rs.36000/-)</td>
+                <td class="column2 style8 s"><a class="comment-indicator"></a><div class="comment">Befor stop<br />
+    Mettavalasa </div>
+    Rambadrapuram<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style8 s"><a class="comment-indicator"></a><div class="comment">befro stop<br />
+    Busayavalasa</div>
+    Arikithota<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style8 s">Manapuram<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style8 s">Gajapathinagaram<br />
+    (Rs.27000/-)</td>
+                <td class="column6 style7 s">Bondapalli P S<br />
+    (Rs.27000/-)</td>
+                <td class="column7 style8 s">Ambativalasa<br />
+    (Rs.22750/-)</td>
+                <td class="column8 style8 s">Gotlam<br />
+    (Rs.22750/-)</td>
+                <td class="column9 style8 s">JNTU College<br />
+    (Rs.22750/-)</td>
+                <td class="column10 style8 s">K.L.Puram<br />
+    (Rs.18000/-)</td>
+                <td class="column11 style10 null"></td>
+                <td class="column12 style11 null"></td>
+                <td class="column13 style11 null"></td>
+                <td class="column14 style11 null"></td>
+                <td class="column15 style11 null"></td>
+                <td class="column16 style11 null"></td>
+              </tr>
+              <tr class="row8">
+                <td class="column0 style9 s">F<br />
+    ( SENIORS ) <br />
+    (SALURU)<br />
+    &nbsp;Starts at 6:45am</td>
+                <td class="column1 style7 s">Saluru BosuBommba Center<br />
+    (Rs.36000/-)<br />
+    </td>
+                <td class="column2 style7 s"><a class="comment-indicator"></a><div class="comment">Befor Stop<br />
+    Chinabajar jn</div>
+    Rambhadrapuram By Pass<br />
+    (Rs.36000/-)</td>
+                <td class="column3 style8 s"><a class="comment-indicator"></a><div class="comment">befor stops<br />
+    1. Deelux.<br />
+    2. Mirthivalasa<br />
+    </div>
+    Maradam<br />
+    (Rs.36000/-)</td>
+                <td class="column4 style8 s">Komatapalli<br />
+    (Rs.36000/-)</td>
+                <td class="column5 style8 s">Manapuram<br />
+    (Rs.36000/-)</td>
+                <td class="column6 style8 s"><a class="comment-indicator"></a><div class="comment">Befor stop Gudivada</div>
+    Gajapathinagaram<br />
+    (Rs.27000/-)</td>
+                <td class="column7 style8 s">Bondapalli P S <br />
+    (Rs.27000/-)</td>
+                <td class="column8 style8 s">Bondapalli<br />
+    (Rs.27000/-)</td>
+                <td class="column9 style8 s">Ambativalasa<br />
+    (Rs.22750/-)</td>
+                <td class="column10 style8 s">Gotlam<br />
+    (Rs.22750/-)</td>
+                <td class="column11 style8 s">RTO Office<br />
+    (Rs.22750/-)</td>
+                <td class="column12 style8 s">Bridge Down<br />
+    (Rs.18000/-)</td>
+                <td class="column13 style10 null"></td>
+                <td class="column14 style8 null"></td>
+                <td class="column15 style11 null"></td>
+                <td class="column16 style11 null"></td>
+              </tr>
+              <tr class="row9">
+                <td class="column0 style9 s">G <br />
+    ( SENIORS )<br />
+    (NAD - KARASA)<br />
+    &nbsp;Starts at 7:00am</td>
+                <td class="column1 style8 s">NAD<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style8 s">Karasa<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style8 s">Marripalem<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style8 s">104 Area<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style8 s">IT Junction<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style8 s">Urvasi<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style8 s"><a class="comment-indicator"></a><div class="comment">befor stop<br />
+    Kancharapalem</div>
+    Gnanapuram<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style8 s">Allipuram<br />
+    (Rs.34500/-)</td>
+                <td class="column9 style8 s">Railway New Colony<br />
+    (Rs.34500/-)</td>
+                <td class="column10 style8 s"><a class="comment-indicator"></a><div class="comment">Befor Stop <br />
+    Srikanya<br />
+    </div>
+    Dondaparthy<br />
+    (Rs.34500/-)</td>
+                <td class="column11 style8 s">Sangam Office<br />
+    (Rs.34500/-)</td>
+                <td class="column12 style8 s">Akkayyapalem Down<br />
+    (Rs.34500/-)</td>
+                <td class="column13 style8 s"><a class="comment-indicator"></a><div class="comment">Befor stop<br />
+    Akkayyapalem H.W</div>
+    4 th Police Station<br />
+    (Rs.34500/-)</td>
+                <td class="column14 style8 s">PM Plaem Stadium<br />
+    (Rs.34500/-)</td>
+                <td class="column15 style7 s">Boyapalem<br />
+    (Rs.34500/-)</td>
+                <td class="column16 style7 null"></td>
+              </tr>
+              <tr class="row10">
+                <td class="column0 style9 s">H<br />
+    &nbsp;( JUNIORS )<br />
+    (SIRIPURAM -VSP)<br />
+    Starts at 7:00am</td>
+                <td class="column1 style7 s">PMPalemLast Bus Stop<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style7 s">PMPalem 2nd bus stop,<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style7 s">PMPalem,1st bus stop<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style7 s">Carshed<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style7 s">Chandrampalem<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style7 s">Madhurawada<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style7 s">Kommadhi<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style10 s">Rajula Tallvalasa<br />
+    (Rs.25000/-)</td>
+                <td class="column9 style7 s">Tagarapuvalasa <br />
+    (3 templs)<br />
+    (Rs.25000/-)</td>
+                <td class="column10 style7 s">Tagarapuvalasa<br />
+    (Rs.25000/-)</td>
+                <td class="column11 style10 null"></td>
+                <td class="column12 style7 null"></td>
+                <td class="column13 style7 null"></td>
+                <td class="column14 style7 null"></td>
+                <td class="column15 style7 null"></td>
+                <td class="column16 style7 null"></td>
+              </tr>
+              <tr class="row11">
+                <td class="column0 style9 s">I <br />
+    (SENIORS)<br />
+    &nbsp;(NAD - NSTL GATE) <br />
+    Starts at 7:00am</td>
+                <td class="column1 style7 s">NAD<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style7 s">Baji Jn<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style8 s">Gopalapatnam Bunk<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style8 s">L G Polymeries<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style8 s">Vepagunta<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style10 s"><a class="comment-indicator"></a><div class="comment">Before Stop <br />
+    Simhapuri Layout</div>
+    Goshala<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style10 s">Simhachalam Complex<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style10 s">Hanumanthawaka<br />
+    (Rs.34500/-)</td>
+                <td class="column9 style10 s">VIMS<br />
+    (Rs.34500/-)</td>
+                <td class="column10 style10 s">Yandada<br />
+    (Rs.34500/-)</td>
+                <td class="column11 style10 s">Midhilapuri Colony road<br />
+    (Rs.34500/-)</td>
+                <td class="column12 style10 s">Chandrampalem<br />
+    (Rs.34500/-)</td>
+                <td class="column13 style10 s">Boyapalem<br />
+    (Rs.34500/-)</td>
+                <td class="column14 style11 s"><a class="comment-indicator"></a><div class="comment">Befor Stop<br />
+    Gandheeram</div>
+    Bheemili Cross Road<br />
+    (Rs.25000/-</td>
+                <td class="column15 style7 s"><a class="comment-indicator"></a><div class="comment">befor stop<br />
+    1. Andapuram<br />
+    2. peddipalem<br />
+    </div>
+    Tagarapuvalasa <br />
+    (3 templs)<br />
+    (Rs.25000/-)</td>
+                <td class="column16 style11 s">Avanthi College<br />
+    (Rs.25000/-)<br />
+    </td>
+              </tr>
+              <tr class="row12">
+                <td class="column0 style9 s">J <br />
+    ( JUNIORS )<br />
+    (NAD - NSTL) <br />
+    Starts at 7:00am</td>
+                <td class="column1 style7 s">NSTL Gate<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style7 s"><a class="comment-indicator"></a><div class="comment">Before stop <br />
+    R & B</div>
+    Punjab Hotel<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style7 s">Birla<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style7 s"><a class="comment-indicator"></a><div class="comment">Before stop<br />
+    5th Town PS</div>
+    Urvasi<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style7 s">Kancharapalem<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style7 s">Tatichetlapalem<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style7 s">Port Hospital<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style7 s">Akkayyapalem H W<br />
+    (Rs.34500/-)</td>
+                <td class="column9 style10 s"><a class="comment-indicator"></a><div class="comment">Before stop<br />
+    4th town</div>
+    Gurudwara <br />
+    (Rs.34500/-)</td>
+                <td class="column10 style7 s">Maddilapalem<br />
+    (Rs.34500/-)</td>
+                <td class="column11 style7 s">Automotive<br />
+    (Rs.34500/-)</td>
+                <td class="column12 style10 s">Isukathota<br />
+    (Rs.34500/-)</td>
+                <td class="column13 style7 s">Yandada Bunk<br />
+    (Rs.34500/-)</td>
+                <td class="column14 style7 s">Yendada Bus Stop<br />
+    (Rs.34500/-)</td>
+                <td class="column15 style7 s"><a class="comment-indicator"></a><div class="comment">Before Stop.<br />
+    Law College</div>
+    PM palem stadium<br />
+    (Rs.34500/-)</td>
+                <td class="column16 style7 s">Carshed jatara<br />
+    (Rs.34500/-)</td>
+              </tr>
+              <tr class="row13">
+                <td class="column0 style9 s">K <br />
+    ( SENIORS )<br />
+    (TOWN KOTHA ROAD) <br />
+    &nbsp;Starts at 7:00am</td>
+                <td class="column1 style7 s">Town Kotha Road<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style7 s"><a class="comment-indicator"></a><div class="comment">Purna Market</div>
+    Vellampeta <br />
+    (Rs.34500/-)</td>
+                <td class="column3 style7 s"><a class="comment-indicator"></a><div class="comment">Chitralaya</div>
+    Jagadamba<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style7 s">Green Park<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style7 s">Seven Hills<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style7 s"><a class="comment-indicator"></a><div class="comment">Ramnagar</div>
+    Governor Bangalow<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style7 s"><a class="comment-indicator"></a><div class="comment">All india Radio</div>
+    Siripuram<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style7 s">AU Out gate<br />
+    (Rs.34500/-)</td>
+                <td class="column9 style7 s">China waltair<br />
+    (Rs.34500/-)</td>
+                <td class="column10 style10 s">Vuda Park<br />
+    (Rs.34500/-)</td>
+                <td class="column11 style10 s">Baba Bazar<br />
+    (Rs.34500/-)</td>
+                <td class="column12 style10 s">Ramalaxmi Appartment<br />
+    (Rs.34500/-)</td>
+                <td class="column13 style10 s">Ushodaya<br />
+    (Rs.34500/-)</td>
+                <td class="column14 style7 s"><a class="comment-indicator"></a><div class="comment">AS Raju Grounds</div>
+    Girijan Bhavan<br />
+    (Rs.34500/-)</td>
+                <td class="column15 style7 s">Venkojipalem<br />
+    (Rs.34500/-)</td>
+                <td class="column16 style7 null"></td>
+              </tr>
+              <tr class="row14">
+                <td class="column0 style9 s">L<br />
+    ( SENIORS )<br />
+    &nbsp;(NAD - NSTL) <br />
+    Starts at 7:00am</td>
+                <td class="column1 style7 s">NAD<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style7 s"><a class="comment-indicator"></a><div class="comment">R & B<br />
+    Panjab Hotel<br />
+    Birla</div>
+    5 th Town PS<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style7 s">Urvasi<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style7 s"><a class="comment-indicator"></a><div class="comment">Kanchralapalem</div>
+    Tatichetlapalem<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style7 s">Port Hospital<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style7 s"><a class="comment-indicator"></a><div class="comment">Akkayyapalem<br />
+    4th town</div>
+    Gurudwara<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style7 s">Satyam Jn<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style7 s"><a class="comment-indicator"></a><div class="comment">Kinnara Theator</div>
+    Maddilapalem<br />
+    (Rs.34500/-)</td>
+                <td class="column9 style7 s"><a class="comment-indicator"></a><div class="comment">Automotive</div>
+    Isukathota<br />
+    (Rs.34500/-)</td>
+                <td class="column10 style7 s">Yendada Bunk<br />
+    (Rs.34500/-)</td>
+                <td class="column11 style7 s">Yendada Bus Stop<br />
+    (Rs.34500/-)</td>
+                <td class="column12 style7 s">Tagarapuvalasa 3 temples<br />
+    (Rs.25000/-)</td>
+                <td class="column13 style7 s">Tagarapuvalasa Gosthani River<br />
+    (Rs.25000/-)</td>
+                <td class="column14 style10 null"></td>
+                <td class="column15 style11 null"></td>
+                <td class="column16 style11 null"></td>
+              </tr>
+              <tr class="row15">
+                <td class="column0 style9 s">M<br />
+    &nbsp;(JUNIORS / SENIORS)<br />
+    (SABBAVARAM)<br />
+    &nbsp;Starts at 7:00am</td>
+                <td class="column1 style8 s">Sabbavaram<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style8 s">Pina gadi<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style8 s">Rampuram<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style7 s">Pendhurty Bridge<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style7 s">Pendhurty Jn<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style7 s">Saripalli<br />
+    (Rs.31000/-)</td>
+                <td class="column7 style7 s">Desapatripalem<br />
+    (Rs.31000/-)</td>
+                <td class="column8 style7 s">Mangalapalem<br />
+    (Rs.31000/-)</td>
+                <td class="column9 style7 s">Kothavalasa Rly S<br />
+    (Rs.31000/-)</td>
+                <td class="column10 style7 s">Kothavalasa Jn<br />
+    (Rs.31000/-)</td>
+                <td class="column11 style7 s">Kothavalasa  HI School<br />
+    (Rs.31000/-)</td>
+                <td class="column12 style7 s">Kantikapallli<br />
+    (Rs.31000/-)</td>
+                <td class="column13 style7 s">Alamanda<br />
+    (Rs.23750/-)</td>
+                <td class="column14 style8 null"></td>
+                <td class="column15 style8 null"></td>
+                <td class="column16 style11 null"></td>
+              </tr>
+              <tr class="row16">
+                <td class="column0 style9 s">N<br />
+    ( SENIORS )<br />
+    &nbsp;(NAD - Baji Jn..) <br />
+    Starts at 7:00am</td>
+                <td class="column1 style7 s"><a class="comment-indicator"></a><div class="comment">L G Polymeries</div>
+    Krishna Nagar<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style7 s">Naidu Thota<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style7 s"><a class="comment-indicator"></a><div class="comment">vepagunta anjayaneya swamy temple<br />
+    Krishnarayapurma</div>
+    Purushottapuram<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style7 s">Sujathanagar<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style7 s">Chinnamushidivada<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style7 s">Pendhurty Police Station<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style7 s">Pendhurty Hospital<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style7 s">Pendurthy jn<br />
+    (Rs.34500/-)</td>
+                <td class="column9 style7 s">Alamanda <br />
+    (Rs.23750/-)</td>
+                <td class="column10 style7 s">Korukonda<br />
+    (Rs.23750/-) </td>
+                <td class="column11 style7 s">Chinnapuram<br />
+    (Rs.18000/-)</td>
+                <td class="column12 style8 null"></td>
+                <td class="column13 style10 null"></td>
+                <td class="column14 style10 null"></td>
+                <td class="column15 style11 null"></td>
+                <td class="column16 style11 null"></td>
+              </tr>
+              <tr class="row17">
+                <td class="column0 style9 s">O <br />
+    &nbsp;(JUNIORS / SENIORS)<br />
+    (NAD - Baji Jn..) <br />
+    Starts at 7:00am</td>
+                <td class="column1 style7 s">Baji Jn<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style7 s">Gopalapatnam Rly St<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style7 s">Gopalapatnam Bunk<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style10 s">Simhachalam Depo<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style7 s"><a class="comment-indicator"></a><div class="comment">Prahaladhapuram</div>
+    Srinivasanagar<br />
+    (Rs.34500/-)</td>
+                <td class="column6 style7 s"><a class="comment-indicator"></a><div class="comment">Goshala</div>
+    Adivivaram<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style10 s"><a class="comment-indicator"></a><div class="comment">Simhachalam Complex</div>
+    Chinagadili<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style7 s">Arilova<br />
+    (Rs.34500/-)</td>
+                <td class="column9 style7 s"><a class="comment-indicator"></a><div class="comment">Saibaba temple<br />
+    Pedagadili</div>
+    Hanumanthawaka (Vims)<br />
+    (Rs.34500/-)</td>
+                <td class="column10 style7 s"><a class="comment-indicator"></a><div class="comment">Vims Hospital</div>
+    Dairy Form<br />
+    (Rs.34500/-)</td>
+                <td class="column11 style7 s">Visakha Valley<br />
+    (Rs.34500/-)</td>
+                <td class="column12 style8 s">Anandapuram<br />
+    (Rs.25000/-)</td>
+                <td class="column13 style7 s">Tagarapuvalasa <br />
+    (Rs.25000/-)</td>
+                <td class="column14 style10 null"></td>
+                <td class="column15 style10 null"></td>
+                <td class="column16 style10 null"></td>
+              </tr>
+              <tr class="row18">
+                <td class="column0 style6 s">P<br />
+    &nbsp;( SENIORS)<br />
+    (DABAGARDENS)<br />
+    Starts at 7:00am</td>
+                <td class="column1 style7 s"><a class="comment-indicator"></a><div class="comment">Town Kotha Road<br />
+    PurnaMarket</div>
+    Jagadamba<br />
+    (Rs.34500/-)</td>
+                <td class="column2 style7 s"><a class="comment-indicator"></a><div class="comment">Police Barex<br />
+    Jail Road<br />
+    </div>
+    Dabagardens<br />
+    (Rs.34500/-)</td>
+                <td class="column3 style7 s">R.K.Family Store<br />
+    (Rs.34500/-)</td>
+                <td class="column4 style7 s">Seethampeta<br />
+    (Rs.34500/-)</td>
+                <td class="column5 style14 s">Satyam Ju <br />
+    (Rs.34500/-)</td>
+                <td class="column6 style7 s">Eenadu<br />
+    (Rs.34500/-)</td>
+                <td class="column7 style7 s">Seethammadara<br />
+    (Rs.34500/-)</td>
+                <td class="column8 style7 s">MMTC<br />
+    (Rs.34500/-)</td>
+                <td class="column9 style7 s">HB.Colony<br />
+    (Rs.34500/-)</td>
+                <td class="column10 style7 s">Bheemili Cross Road<br />
+    (Rs.25000/-)</td>
+                <td class="column11 style10 null"></td>
+                <td class="column12 style10 null"></td>
+                <td class="column13 style11 null"></td>
+                <td class="column14 style11 null"></td>
+                <td class="column15 style11 null"></td>
+                <td class="column16 style11 null"></td>
+              </tr>
+              <tr class="row19">
+                <td class="column0 style6 s">Q <br />
+    ( SENIORS )<br />
+    (DENKADA)<br />
+    Starts at 7:45am</td>
+                <td class="column1 style10 s">Mylon<br />
+    (Rs.27000/-)</td>
+                <td class="column2 style10 s">Pusapatirega<br />
+    (Rs.27000/-)</td>
+                <td class="column3 style10 s">Perapurma<br />
+    (Rs.27000/-)</td>
+                <td class="column4 style10 s">Kondada centre <br />
+    (Rs.27000/-)</td>
+                <td class="column5 style10 s">Nathavalasa <br />
+    (Rs.22750/-)</td>
+                <td class="column6 style7 s">Denkada<br />
+    (Rs.22750/-)</td>
+                <td class="column7 style7 s">Chinna Tadivada<br />
+    (Rs.22750/-)</td>
+                <td class="column8 style7 s">Pedda Tadivada<br />
+    (Rs.22750/-)</td>
+                <td class="column9 style7 s">Narayanapuram<br />
+    (Rs.18000/-)</td>
+                <td class="column10 style7 s">Jammu<br />
+    (Rs.18000/-)</td>
+                <td class="column11 style7 s">Maramma Thalli Gudi<br />
+    (Rs.18000/-)</td>
+                <td class="column12 style7 s">Dasannapeta Ring Road<br />
+    (Rs.18000/-)</td>
+                <td class="column13 style7 s">Sun School<br />
+    (Rs.18000/-)</td>
+                <td class="column14 style7 s">Venkateswara Swamy Temple Arch<br />
+    (Rs.18000/-)</td>
+                <td class="column15 style7 s">Poovada School<br />
+    (Rs.18000/-)</td>
+                <td class="column16 style7 s">Ice Factory<br />
+    (Rs.16000/-)</td>
+              </tr>
+              <tr class="row20">
+                <td class="column0 style6 s">R <br />
+    ( JUNIORS )<br />
+    &nbsp;(Nellimarla) <br />
+    Starts at 7:45am</td>
+                <td class="column1 style7 s">Cheepurupalli Complex<br />
+    (Rs.27000/-)</td>
+                <td class="column2 style7 s">Anjaneyapuram<br />
+    (Rs.27000/-)</td>
+                <td class="column3 style7 s">Garividi Eye hospital<br />
+    (Rs.27000/-)</td>
+                <td class="column4 style7 s">Garividi Theator<br />
+    (Rs.27000/-)</td>
+                <td class="column5 style7 s">Bridge Up &amp; Down<br />
+    (Rs.27000/-)</td>
+                <td class="column6 style7 s">Atchuthapuram<br />
+    (Rs.27000/-)</td>
+                <td class="column7 style7 s">Gujjingavalasa<br />
+    (Rs.27000/-)</td>
+                <td class="column8 style7 s">Gudem Jn<br />
+    (Rs.27000/-)</td>
+                <td class="column9 style7 s">Gurla<br />
+    (Rs.22750/-)</td>
+                <td class="column10 style7 s">Nellimarlla R S<br />
+    (Rs.22750/-)</td>
+                <td class="column11 style7 s">Moida Jn<br />
+    (Rs.22750/-)</td>
+                <td class="column12 style7 s">Nellimarlla Complex<br />
+    (Rs.22750/-)</td>
+                <td class="column13 style7 s">Rama Theerthalu Jn<br />
+    (Rs.22750/-)</td>
+                <td class="column14 style7 s">Diet/Mims Hospital<br />
+    (Rs.22750/-)</td>
+                <td class="column15 style7 s">Poolbhaga<br />
+    (Rs.18000/-)</td>
+                <td class="column16 style7 null"></td>
+              </tr>
+              <tr class="row21">
+                <td class="column0 style6 s">S <br />
+    ( SENIORS )<br />
+    (L KOTA) <br />
+    Starts at 7:00am</td>
+                <td class="column1 style7 s"><a class="comment-indicator"></a><div class="comment">Tally2:<br />
+    Devi Temple</div>
+    S.Kota Complex<br />
+    (Rs.28500/-)</td>
+                <td class="column2 style7 s"><a class="comment-indicator"></a><div class="comment">One Way</div>
+    Dharmavaram<br />
+    (Rs.24500/-)</td>
+                <td class="column3 style7 s"><a class="comment-indicator"></a><div class="comment">Mamdidipalli<br />
+    Revalapalem jn</div>
+    Seetharampuram<br />
+    (Rs.24500/-)</td>
+                <td class="column4 style7 s">Bonangi<br />
+    (Rs.24500/-)</td>
+                <td class="column5 style7 s">Vasadi<br />
+    (Rs.24500/-)</td>
+                <td class="column6 style7 s">Tamarapalli Jn<br />
+    (Rs.24500/-)</td>
+                <td class="column7 style7 s"><a class="comment-indicator"></a><div class="comment">Korlam<br />
+    Ginjeru</div>
+    Gantyada<br />
+    (Rs.24000/-)</td>
+                <td class="column8 style7 s">Lakkidam<br />
+    (Rs.24000/-)</td>
+                <td class="column9 style7 s">Narava<br />
+    (Rs.24000/-)</td>
+                <td class="column10 style7 s">Ramavaram<br />
+    (Rs.24000/-)</td>
+                <td class="column11 style7 s">Kamakshinagar<br />
+    (Rs.18000/-)</td>
+                <td class="column12 style7 s">Kanapaka<br />
+    (Rs.18000/-)</td>
+                <td class="column13 style7 s">Collector Office<br />
+    (Rs.18000/-)</td>
+                <td class="column14 style7 s">R &amp; B<br />
+    (Rs.18000/-)</td>
+                <td class="column15 style7 s">Bridge Down<br />
+    (Rs.18000/-)</td>
+                <td class="column16 style7 s">Court<br />
+    (Rs.16000/-)</td>
+              </tr>
+              <tr class="row22">
+                <td class="column0 style6 s">T<br />
+    ( JUNIORS )<br />
+    (AYYANNAPETA)<br />
+    &nbsp;Starts at 7:45 am</td>
+                <td class="column1 style7 s">Collector Office<br />
+    (Rs.18000/-)</td>
+                <td class="column2 style7 s">Police Barex VZM<br />
+    (Rs.18000/-)</td>
+                <td class="column3 style7 s">R &amp; B<br />
+    (Rs.18000/-)</td>
+                <td class="column4 style7 s">Railway Sation<br />
+    (Rs.18000/-)</td>
+                <td class="column5 style7 s">CMR<br />
+    (Rs.18000/-)</td>
+                <td class="column6 style10 s">NCS<br />
+    (Rs.18000/-)</td>
+                <td class="column7 style7 s">MR College<br />
+    (Rs.18000/-)</td>
+                <td class="column8 style7 s">Balaji jn <br />
+    (Rs.18000/-)</td>
+                <td class="column9 style7 s">Ice Fatory <br />
+    (Rs.16000/-)</td>
+                <td class="column10 style7 null"></td>
+                <td class="column11 style7 null"></td>
+                <td class="column12 style8 null"></td>
+                <td class="column13 style8 null"></td>
+                <td class="column14 style8 null"></td>
+                <td class="column15 style8 null"></td>
+                <td class="column16 style8 null"></td>
+              </tr>
+              <tr class="row23">
+                <td class="column0 style6 s">U<br />
+    ( SENIORS )<br />
+    (CHEEPURUPALLI)<br />
+    &nbsp;Starts at 7:10am</td>
+                <td class="column1 style7 s">Cheepurupalli Complex<br />
+    (Rs.27000/-)</td>
+                <td class="column2 style7 s">Anjaneyapuram<br />
+    (Rs.27000/-)</td>
+                <td class="column3 style7 s">Garividi Eye hospital<br />
+    (Rs.27000/-)</td>
+                <td class="column4 style7 s">Garividi Theator<br />
+    (Rs.27000/-)</td>
+                <td class="column5 style7 s">Bridge Up &amp; Down<br />
+    (Rs.27000/-)</td>
+                <td class="column6 style7 s">Atchuthapuram<br />
+    (Rs.27000/-)</td>
+                <td class="column7 style7 s">Gujjingavalasa<br />
+    (Rs.27000/-)</td>
+                <td class="column8 style7 s">Gudem Jn<br />
+    (Rs.27000/-)</td>
+                <td class="column9 style7 s">Gurla<br />
+    (Rs.22750/-)</td>
+                <td class="column10 style7 s">Nellimarlla R S<br />
+    (Rs.22750/-)</td>
+                <td class="column11 style7 s">Moida Jn<br />
+    (Rs.22750/-)</td>
+                <td class="column12 style7 s">Nellimarlla Complex<br />
+    (Rs.22750/-)</td>
+                <td class="column13 style7 s">Rama Theerthalu Jn<br />
+    (Rs.22750/-)</td>
+                <td class="column14 style7 s">Diet/Mims Hospital<br />
+    (Rs.22750/-)</td>
+                <td class="column15 style7 s">Poolbhaga<br />
+    (Rs.18000/-)</td>
+                <td class="column16 style8 null"></td>
+              </tr>
+              <tr class="row24">
+                <td class="column0 style6 s">V<br />
+    ( SENIORS )<br />
+    (AYYANNAPETA) <br />
+    Starts at 7:45am  </td>
+                <td class="column1 style7 s">Ayyannapeta<br />
+    (Rs.18000/-)</td>
+                <td class="column2 style7 s">Kamakshinagar<br />
+    (Rs.18000/-)</td>
+                <td class="column3 style7 s">Kanapaka<br />
+    (Rs.18000/-)</td>
+                <td class="column4 style7 s">Collector Office<br />
+    (Rs.18000/-)</td>
+                <td class="column5 style7 s">Vuda Colony<br />
+    (Rs.18000/-)</td>
+                <td class="column6 style7 s">R &amp; B<br />
+    (Rs.18000/-)</td>
+                <td class="column7 style7 s">Bridge Down<br />
+    (Rs.18000/-)</td>
+                <td class="column8 style7 s">Pradeepnagar<br />
+    (Rs.16000/-)</td>
+                <td class="column9 style7 s">Court<br />
+    (Rs.16000/-)</td>
+                <td class="column10 style7 s">D-Mart<br />
+    (Rs.16000/-)</td>
+                <td class="column11 style7 s">Y-Junction<br />
+    (Rs.16000/-)</td>
+                <td class="column12 style8 null"></td>
+                <td class="column13 style8 null"></td>
+                <td class="column14 style8 null"></td>
+                <td class="column15 style8 null"></td>
+                <td class="column16 style8 null"></td>
+              </tr>
+              <tr class="row25">
+                <td class="column0 style6 s">W<br />
+    ( SENIORS )<br />
+    (POOLBHAG)<br />
+    &nbsp;Starts at 7:45am   </td>
+                <td class="column1 style7 s">Water Tank<br />
+    (Rs.18000/-)</td>
+                <td class="column2 style10 s"><a class="comment-indicator"></a><div class="comment">Ashok Nagar</div>
+    Baba metta<br />
+    (Rs.18000/-)</td>
+                <td class="column3 style10 s">SBI<br />
+    (Rs.18000/-)</td>
+                <td class="column4 style10 s">Raithu Bazar<br />
+    (Rs.18000/-)</td>
+                <td class="column5 style7 s">Dasannapeta<br />
+    (Rs.18000/-)</td>
+                <td class="column6 style7 s">Ring Road<br />
+    (Rs.18000/-)</td>
+                <td class="column7 style7 s">Sun school<br />
+    (Rs.18000/-)</td>
+                <td class="column8 style7 s">Puvvad school<br />
+    (Rs.18000/-)</td>
+                <td class="column9 style10 s">Ice Factory<br />
+    (Rs.16000/-)</td>
+                <td class="column10 style8 null"></td>
+                <td class="column11 style8 null"></td>
+                <td class="column12 style8 null"></td>
+                <td class="column13 style8 null"></td>
+                <td class="column14 style8 null"></td>
+                <td class="column15 style8 null"></td>
+                <td class="column16 style8 null"></td>
+              </tr>
+              <tr class="row26">
+                <td class="column0 style6 s">X<br />
+    ( JUNIORS)<br />
+    (S KOTA) <br />
+    Starts at 7:15am         </td>
+                <td class="column1 style7 s">L.Kota<br />
+    (Rs.28500/-)</td>
+                <td class="column2 style7 s">Sompuram<br />
+    (Rs.28500/-)</td>
+                <td class="column3 style7 s">Paturu<br />
+    (Rs.28500/-)</td>
+                <td class="column4 style7 s">Boddam.<br />
+    (Rs.28500/-)</td>
+                <td class="column5 style7 s">Pavada<br />
+    (Rs.23750/-)</td>
+                <td class="column6 style7 s">Jami<br />
+    (Rs.23750/-)</td>
+                <td class="column7 style7 s">Bheemasingi sugar Fcatory<br />
+    (Rs.23750/-)</td>
+                <td class="column8 style7 s">Korukonda Saink School <br />
+    (Rs.23750/-)</td>
+                <td class="column9 style7 s">Chinnapuram<br />
+    (Rs.18000/-)</td>
+                <td class="column10 style10 s">Y-Junction <br />
+    (Rs.16000/-)</td>
+                <td class="column11 style7 null"></td>
+                <td class="column12 style7 null"></td>
+                <td class="column13 style7 null"></td>
+                <td class="column14 style7 null"></td>
+                <td class="column15 style7 null"></td>
+                <td class="column16 style7 null"></td>
+              </tr>
+              <tr class="row27">
+                <td class="column0 style6 s">y<br />
+    ( JUNIORS)<br />
+    (S KOTA) <br />
+    Starts at 7:15am         </td>
+                <td class="column1 style7 s">Water Tank<br />
+    (Rs.18000/-)</td>
+                <td class="column2 style7 s">Dasannapeta<br />
+    (Rs.18000/-)</td>
+                <td class="column3 style10 s">Ring Road <br />
+    (Rs.18000/-)</td>
+                <td class="column4 style10 s">Ice Factory<br />
+    (Rs.18000/-)</td>
+                <td class="column5 style10 s">Balaji Jn <br />
+    (Rs.18000/-)</td>
+                <td class="column6 style10 s">RTC Complex <br />
+    (Rs.18000/-)</td>
+                <td class="column7 style7 s">Bridge Down<br />
+    (Rs.18000/-)</td>
+                <td class="column8 style7 s">Court<br />
+    (Rs.16000/-)</td>
+                <td class="column9 style10 s">Y-Junction <br />
+    (Rs.16000/-)</td>
+                <td class="column10 style7 null"></td>
+                <td class="column11 style7 null"></td>
+                <td class="column12 style7 null"></td>
+                <td class="column13 style7 null"></td>
+                <td class="column14 style7 null"></td>
+                <td class="column15 style7 null"></td>
+                <td class="column16 style7 null"></td>
+              </tr>
+            </tbody>
+        </table>
+      </body>
+
+
+
+
+  <footer>
+    <p>&copy; 2024 University Bus Management System</p>
+    <p>Developed by: M.KusumaKumar B.karthikeya Teja Shreekha</p>
+  </footer>
+  </div>
+
+    
+</body>
+</html>

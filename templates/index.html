@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVGR Bus Management System</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <script src="{% static 'script.js' %}" defer></script> <!-- Include script.js -->
+
+</head>
+<body>
+  <div>
+   <marquee behavior="scroll-animation" direction="left" class="marquee">Maharaj Vijayaram Gajapathi Raj College of Engineering (Autonomous)</marquee>
+  
+    <header>
+    
+     <div class="logo">
+       <img src=" https://yt3.googleusercontent.com/ytc/AIdro_nBqKGojl45dPe27v6-CuoZAC2brmov3EJfwUSaMAyfkw=s900-c-k-c0x00ffffff-no-rj" alt="College Logo">
+      </div>
+
+      <div class = "header-content">
+        <h1>College Transportation </h1>
+        <nav>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'routes' %}">Bus Updates</a></li>
+            <li><a href="{% url 'login' %}">Student Login</a></li>
+            <li><a href="{% url 'vacancy' %}">Vacancies</a></li>
+            <li><a href="{% url 'apply' %}">Application Form</a></li>
+            <li><a href="{% url 'Info' %}">Info</a></li>
+            <li><a href="{% url 'Remarks' %}">Remarks</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <!-- Container for Main Content -->
+  <div class="container">
+    <section id="home">
+      <h1>Welcome to the MVGR Bus Management System</h1>
+      <p>Manage your bus schedules and applications with ease.</p>
+
+      <!-- Carousel Section -->
+      <div class="carousel-container">
+        <div class="carousel-background"></div>
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <image src="https://www.mvgrce.com/images/2023/07/18/4.jpeg" alt="Bus Image 1">
+            </div>
+            <div class="carousel-item">
+              <image src="https://www.collegesamachar.com/uploads/colleges/gallery/93/1647939641transportfacilities.jpg" alt="Bus Image 2">
+            </div>
+            <div class="carousel-item">
+              <image src="https://www.mvgrce.com/images/2023/07/18/1.jpeg" alt="Bus Image 3">
+            </div>
+          </div>
+          <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+          <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll Information Section -->
+    <section id="info" class="scroll-animation">
+      <h2>For Communication</h2>
+      <div class="info-content">
+        <div class="info-text">
+          <h3>Dr. ATCHUTA RAO SADHU</h3>
+          <p>Associate Professor, DATA Engineering.<br>
+            CONVENER -  COLLEGE TRANSPORT <br>  
+            Mobile:  9441159714<br>
+            Email : transportation.mvgr@gmail.com.
+          </p>
+        </div>
+      </div>
+
+      <h2>Total Buses Information</h2>
+      <p>We currently operate <strong>25 buses</strong> covering various routes throughout the city to ensure safe and reliable transportation for our students and staff.</p>
+    </section>
+
+    <!-- Additional Transportation Details Section -->
+    <section class="transportation-details">
+      <h2>Transportation Details</h2>
+      <p>Our transportation system includes a variety of services to ensure comfort and efficiency for all users. We provide:</p>
+      <ul>
+        <li>Regularly scheduled bus services throughout the week.</li>
+        <li>On-demand transport options for special requirements.</li>
+        <li>Real-time tracking for all buses via our mobile app.</li>
+        <li>Special arrangements for events and emergencies.</li>
+      </ul>
+    </section>
+  </div>
+  
+  <footer>
+    <p>&copy; 2024 University Bus Management System</p>
+    <p>Developed by: M.KusumaKumar B.karthikeya Teja Shreekha</p>
+  </footer>
+</body>
+</html>
