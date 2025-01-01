@@ -103,14 +103,23 @@ Log in to view and manage bus applications.
 Submit transportation requests and make payments securely.
 
 ## Output Screenshots
+###Home Page
+![home](screenshots/Screenshot%202024-10-31%20081816.png)
+### Bus Routes
+![routes](screenshots/Screenshot%202024-10-31%20081902.png)
 
-
-
-
-
-
-
-
-
+### Student Dashboard
+![routes](screenshots/Screenshot%202024-10-31%20081954.png)
+![routes](screenshots/Screenshot%202024-10-31%20082014.png)
+![routes](screenshots/Screenshot%202024-10-31%20082027.png)
+![routes](screenshots/Screenshot%202024-10-31%20082050.png)
+![routes](screenshots/Screenshot%202024-10-31%20082109.png)
+![routes](screenshots/Screenshot%202024-10-31%20082145.png)
+![routes](screenshots/Screenshot%202024-10-31%20082155.png)
+![routes](screenshots/Screenshot%202024-10-31%20082208.png)
+![routes](screenshots/Screenshot%202024-10-31%20082218.png)
+![routes](screenshots/Screenshot%202024-10-31%20082231.png)
+![routes](screenshots/Screenshot%202024-10-31%20082218.png)
+![routes](screenshots/Screenshot%202024-10-31%20082257.png)
 
 
