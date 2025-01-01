@@ -1,5 +1,7 @@
-# University-Bus-Management-System
-## College Transportation Management System
+
+# University-Bus-Management-System 
+
+## College Transportation Management System Using Django
 
 ## Features
 ### Home Page
