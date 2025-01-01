@@ -102,6 +102,9 @@ Approve or decline applications and monitor payment records.
 Log in to view and manage bus applications.
 Submit transportation requests and make payments securely.
 
+## Output Screenshots
+
+
 
 
 
