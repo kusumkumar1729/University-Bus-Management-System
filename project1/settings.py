@@ -28,18 +28,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
 
+
     'jazzmin',
-    
-    "whitenoise.runserver_nonstatic",
+    'whitenoise.runserver_nostatic',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -52,13 +52,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = "project1.urls"
@@ -139,7 +140,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 
 
