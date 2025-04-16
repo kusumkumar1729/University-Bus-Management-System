@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh']
 
 
 # Application definition
@@ -88,11 +88,11 @@ WSGI_APPLICATION = "project1.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'bus',
+        "NAME": 'railway',
         'USER':'postgres',
-        'PASSWORD':'1234',
-        'HOST':'localhost',
-        'PORT': '5432', 
+        'PASSWORD':'QtghKlEAzAgxoMmJkFqqQpwpWabqBHkB',
+        'HOST':'interchange.proxy.rlwy.net',
+        'PORT': '53323', 
     }
 }
 
