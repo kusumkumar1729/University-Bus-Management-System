@@ -7,3 +7,5 @@ whitenoise==6.7.0  # For static files handling
 gunicorn==20.0.4  # WSGI server for deployment
 dj-database-url==2.2.0  # Database URL parsing for easier deployment setup
 python-dotenv==1.0.1  # To manage environment variables securely
+setuptools>=56.0.0
+wheel>=0.36.2
