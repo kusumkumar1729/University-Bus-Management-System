@@ -1,6 +1,6 @@
 Django==4.2
 Pillow==10.4.0
-psycopg2==2.9.9  # For PostgreSQL support, use mysqlclient or PyMySQL if you're using MySQL
+psycopg2-binary==2.9.9
 django-heroku==0.3.1  # For Heroku deployment if you plan to deploy there
 django-jazzmin==3.0.1  # For admin UI customization
 whitenoise==6.7.0  # For static files handling
