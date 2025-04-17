@@ -1,5 +1,6 @@
 asgiref==3.6.0
 Django==4.2
+gunicorn
 django-jazzmin==3.0.1
 Jinja2==3.1.6
 mysqlclient==2.2.6
